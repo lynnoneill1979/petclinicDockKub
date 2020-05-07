@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "petclinicprojaks"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "petclinicprojaks"
+    spec:
+      containers:
+        - name: "petclinicprojaks"
+          image: "petclinicproject.azurecr.io/petclinicprojaks"
+          ports:
+          - containerPort: 80
